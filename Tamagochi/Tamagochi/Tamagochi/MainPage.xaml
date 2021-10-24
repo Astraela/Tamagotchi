@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:Tamagochi"
+             x:Class="Tamagochi.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid HorizontalOptions="FillAndExpand" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".25*"/>
+                <RowDefinition Height=".25*"/>
+                <RowDefinition Height=".5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".02*"/>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width=".4*"/>
+            </Grid.ColumnDefinitions>
+        <Image x:Name="Peach" IsVisible="false" Grid.Row="1" Grid.Column="1" Source="peach.png" Aspect="AspectFit" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" />
+            <Label x:Name="PeachText" IsVisible="false" Text="Princess Peach" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TranslationY="-10" TextColor="Black"/>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".01*"/>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height=".01*"/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition Height=".68*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.005*"/>
+                <ColumnDefinition Width="0.75*"/>
+                <ColumnDefinition Width="0.25*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Grid.RowSpan="3"  Grid.ColumnSpan="3" BackgroundColor="#FFFFC3" Padding="0"/>
+
+            <Frame ScaleY=".2" BackgroundColor="#312E2E" Grid.Row="2" Grid.ColumnSpan="3" Padding="0" VerticalOptions="Fill" AnchorY="1"/>
+
+            <StackLayout Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1">
+                <StackLayout Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" FlowDirection="LeftToRight" Orientation="Horizontal" >
+                    <Grid WidthRequest="70" HeightRequest="70" Padding="0">
+                        <Image x:Name ="HungerIcon" Source="meat.png" Scale=".8" />
+                        <Frame x:Name="Hunger" BackgroundColor="#33000000" ScaleY="0" AnchorY="1" HeightRequest="70" VerticalOptions="EndAndExpand" Padding="0" CornerRadius="8"/>
+                    </Grid>
+                    <Grid WidthRequest="70" HeightRequest="70" Padding="0">
+                        <Image x:Name ="ThirstIcon" Source="thirst.png" Scale=".8" />
+                        <Frame x:Name="Thirst" BackgroundColor="#33000000" ScaleY="0" AnchorY="1" HeightRequest="70" VerticalOptions="EndAndExpand" Padding="0" CornerRadius="8"/>
+                    </Grid>
+                    <Grid WidthRequest="70" HeightRequest="70" Padding="0">
+                        <Image x:Name ="BoringIcon" Source="bored.png" Scale=".8"/>
+                        <Frame x:Name="Boring" BackgroundColor="#33000000" ScaleY="0" AnchorY="1" HeightRequest="70" VerticalOptions="EndAndExpand" Padding="0" CornerRadius="8"/>
+                    </Grid>
+                    <Grid WidthRequest="70" HeightRequest="70" Padding="0">
+                        <Image x:Name ="LonelyIcon" Source="loneliness.png" Scale=".8"/>
+                        <Frame x:Name="Lonely" BackgroundColor="#33000000" ScaleY="0" AnchorY="1" HeightRequest="70" VerticalOptions="EndAndExpand" Padding="0" CornerRadius="8"/>
+                    </Grid>
+                    <Grid WidthRequest="70" HeightRequest="70" Padding="0">
+                        <Image x:Name ="StimulationIcon" Source="stimulation.png" Scale=".8"/>
+                        <Frame x:Name="Stimulation" BackgroundColor="#33000000" ScaleY="0" AnchorY="1" HeightRequest="70" VerticalOptions="EndAndExpand" Padding="0" CornerRadius="8"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" FlowDirection="LeftToRight" Orientation="Horizontal" >
+                    <Grid WidthRequest="70" HeightRequest="70" Padding="0">
+                        <Image x:Name ="SleepinessIcon" Source="sleepiness.png" Scale=".8"/>
+                        <Frame x:Name="Sleepiness" BackgroundColor="#33000000" ScaleY="0" AnchorY="1" HeightRequest="70" VerticalOptions="EndAndExpand" Padding="0" CornerRadius="8"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+            <Frame Grid.RowSpan="3"  Grid.ColumnSpan="3"  Padding="0" BackgroundColor="#00FFFFFF">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnStatsClick"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+
+        <RelativeLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image TranslationY="20" x:Name="bowser" Source="bowsey.png"  Aspect="Fill" Scale="4"/>
+        </RelativeLayout>
+    </Grid>
+</ContentPage>

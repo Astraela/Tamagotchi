@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tamagochi.InteractionBar">
+    <Grid HeightRequest="50" Margin="20,10,10,0" HorizontalOptions="FillAndExpand" VerticalOptions="Start"  >
+        <Frame BackgroundColor="White" Padding="0"/>
+        <Frame ScaleX="{Binding BarScale, Mode=OneWay}" BackgroundColor="{Binding BgColor, Mode=OneWay}" HorizontalOptions="Fill" Padding="0" AnchorX="0"/>
+        <Label BackgroundColor="{Binding BarColor, Mode=OneWay}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#000000" Text="{Binding ActionText,Mode=OneWay}" />
+    </Grid>
+</StackLayout>

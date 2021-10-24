@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Tamagochi;assembly=Tamagochi"
+             x:Class="Tamagochi.StatsOverview">
+    <ScrollView>
+        <StackLayout BackgroundColor="#E8E8B1" Padding="0,0,0,20">
+            <Button Text="Interactions" BackgroundColor="White" CornerRadius="10" HorizontalOptions="End" Margin="0,10,10,0" Clicked="Button_Clicked"></Button>
+            <views:statbar x:Name="Hunger"></views:statbar>
+            <views:statbar x:Name="Thirst" Image="thirst.png" Text="THIRST"></views:statbar>
+            <views:statbar x:Name="Boring" Image="bored.png" Text="BOREDOM"></views:statbar>
+            <views:statbar x:Name="Lonely" Image="loneliness.png" Text="LONELINESS"></views:statbar>
+            <views:statbar x:Name="Stimulation" Image="stimulation.png" Text="STIMULATION"></views:statbar>
+            <views:statbar x:Name="Sleepiness" Image="sleepiness.png" Text="SLEEPINESS"></views:statbar>
+
+
+        </StackLayout >
+    </ScrollView>
+</ContentPage>

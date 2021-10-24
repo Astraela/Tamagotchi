@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Tamagochi;assembly=Tamagochi"
+             x:Class="Tamagochi.Interactions">
+    <ScrollView>
+        <StackLayout BackgroundColor="#E8E8B1" Padding="0,0,0,20">
+            <views:InteractionBar x:Name="Hunger" ActionText="Feed bowsey shrooms">
+                <views:InteractionBar.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Feed"/>
+                </views:InteractionBar.GestureRecognizers>
+            </views:InteractionBar>
+            <views:InteractionBar x:Name="Thirst" ActionText="Fill water bowl">
+                <views:InteractionBar.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Water"/>
+                </views:InteractionBar.GestureRecognizers>
+            </views:InteractionBar>
+            <views:InteractionBar x:Name="Boring" ActionText="Play &quot;Kidnapping&quot;">
+                <views:InteractionBar.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Play"/>
+                </views:InteractionBar.GestureRecognizers>
+            </views:InteractionBar>
+            <views:InteractionBar x:Name="Lonely" ActionText="Kidnap a Princess">
+                <views:InteractionBar.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Kidnap"/>
+                </views:InteractionBar.GestureRecognizers>
+            </views:InteractionBar>
+            <views:InteractionBar x:Name="Stimulation" ActionText="Un-Kidnap a Princess">
+                <views:InteractionBar.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Unkidnap"/>
+                </views:InteractionBar.GestureRecognizers>
+            </views:InteractionBar>
+            <views:InteractionBar x:Name="Sleepiness" ActionText="Take bowsey to bed">
+                <views:InteractionBar.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Sleepy"/>
+                </views:InteractionBar.GestureRecognizers>
+            </views:InteractionBar>
+
+
+        </StackLayout >
+    </ScrollView>
+</ContentPage>
